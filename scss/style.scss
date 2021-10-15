@@ -58,17 +58,28 @@ body{
 .pad{
 
   // small left - 8px
-  &-sm-l{
+  &-l{
     padding-left: toRem(23);
+    @include breakpoints-up(large){
+      padding-left: toRem(167);
+    }
   }
 
-  &-sm-r{
+  &-r{
     padding-right: toRem(23);
+    @include breakpoints-up(large){
+      padding-right: toRem(167);
+    }
   }
 
-  &-sm-lr{
-    padding-left: toRem(23);
-    padding-right: toRem(23);
+  &-lr{
+    padding-left: toRem(24);
+    padding-right: toRem(24);
+
+    @include breakpoints-up(large){
+      padding-left: toRem(167);
+      padding-right: toRem(167);
+    }
   }
 }
 
@@ -84,5 +95,31 @@ body{
 .hide-for-desktop{
   @include breakpoints-up(large){
     display: None;
+  }
+}
+
+.cto{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: toRem(137);
+  height: toRem(46);
+  border-radius: toRem(23);
+  text-align: center;
+  // text-transform: uppercase;
+  color: white;
+  background-color: $bright-red;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 300ms ease-in-out;
+
+  &:hover{
+    text-decoration: none;
+    background-color: $very-pale-red;
+    opacity: 0.9;
+  }
+
+  &-sm{
+    
   }
 }

@@ -1,0 +1,52 @@
+@import '../utils';
+@import '../globals';
+
+.header{
+    z-index: 2;
+    padding-top: toRem(40);
+    @include breakpoints-up(large){
+        padding-top: toRem(55);
+        margin-bottom: toRem(90);
+    }
+    
+    &__links{
+        &-primary{
+                li{
+                    display: inline-block;
+                    list-style-type: none;
+                    &:not(:last-child){
+                        margin-right: toRem(33);
+                    }
+                    
+                    a{
+                        display: inline-block;
+                        text-decoration: none;
+                        color: $dark-blue;
+                    }
+                }
+        }
+    }
+
+    &__logo{
+        position: relative;
+        width: toRem(110);
+        height: toRem(20);
+
+        @include breakpoints-up(large){
+            width: toRem(150);
+            height: toRem(30);
+        }
+    }
+
+    &__toggle{
+        span{
+            display: block;
+            width: toRem(25);
+            height: toRem(4);
+            &:not(:last-child){
+                margin-bottom: toRem(3);
+            }
+            background-color: $dark-blue
+        }
+    }
+}

@@ -1,0 +1,80 @@
+@import '../utils';
+@import '../globals';
+
+
+.heroe{
+
+    @include breakpoints-up(large){
+        display: flex;
+    }
+
+    &__image{
+        position: relative;
+        order: 2;
+        flex-grow: 1;
+        width: 100%;
+        min-height: toRem(277);
+        background-image: url('../../public/images/illustration-intro.svg');
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        &::before, &::after{
+            content: " ";
+            position: absolute;
+            display: block;
+        }
+
+        &::before{
+            background-image: url('../../public/images/bg-tablet-pattern.svg');
+        }
+
+        @include breakpoints-up(large){
+            min-width: toRem(500);
+            // min-height: toRem(470);
+            height: 100%;
+
+        }
+    }
+
+    &__text{
+        flex-grow: 1;
+        order: 1;
+        @include breakpoints-up(large){
+            min-width: toRem(500);
+        }
+
+        h1{
+            font-size: toRem(42);
+            font-weight: 700;
+            line-height: toRem(48);
+            color: $dark-blue;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: toRem(24);
+            @include breakpoints-up(large){
+                width: 100%;
+                font-size: toRem(56);
+                line-height: toRem(58);
+                margin-bottom: toRem(37);
+                text-align: left;
+            }
+        }
+
+        p{
+            color: $dark-grayish-blue;
+            font-size: toRem(15);
+            text-align: center;
+            line-height: toRem(17);
+            margin-bottom: toRem(36);
+            @include breakpoints-up(large){
+                width: toRem(332);
+                margin-bottom: toRem(43);
+                text-align: left;
+            }
+        }
+
+
+    }
+
+}
