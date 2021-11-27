@@ -1,20 +1,21 @@
 import React from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from '../styles/components/Navbar.module.css'
+
 import logo from '../public/images/logo.svg'
 
-function Navbar() {
+const Navbar = () => {
     return (
-        <div>
-            <header className={`${styles.header}`}>
-                <nav className='flex flex-jc-sb flex-ai-c pad pad-lr'>
+        <div className='container'>
+            <header className={`${styles.nav}`}>
+                <nav className='flex flex-jc-sb flex-ai-c'>
 
-                    <div className={`${styles.header__logo}`}>
+                    <div className={`${styles.nav__logo} img`}>
                         <Image src={logo} alt='logo' layout='fill' />
                     </div>
 
-                    <ul className={`${styles['header__links-primary']}  hide-for-mobile`}>
+                    <ul className={`${styles['nav__links-primary']}  hide-for-tablet`}>
                         <li>
                             <Link href='/'><a>Pricing</a></Link>
                         </li>
@@ -33,14 +34,14 @@ function Navbar() {
                     </ul>
 
 
-                    <div className={`${styles.header__toggle} hide-for-desktop`}>
+                    <div className={`${styles.nav__toggle} hide-for-desktop`}>
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
 
-                    <div className='hide-for-mobile'>
-                        <Link href='/'><a className={`cto`}>Get Started</a></Link>
+                    <div className='hide-for-tablet'>
+                        <Link href='/'><a className={`cta`}>Get Started</a></Link>
                     </div>
 
                 </nav>

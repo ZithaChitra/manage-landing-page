@@ -1,0 +1,124 @@
+@use '../util' as *;
+
+
+.home{
+
+    &__info{
+
+        @include breakpoints-up(large){
+            display: flex;
+            justify-content: center;
+
+        }
+
+        &-title{
+
+            width: calc(100% - rem(94));
+            margin: 0 auto;
+            margin-bottom: rem(60);
+
+            @include breakpoints-up(large){
+                width: rem(435);
+                margin: 0;
+                margin-right: rem(150);
+                margin-bottom: 0;
+
+            }
+
+            h2{
+              text-align: center;
+              color: var(--dark-blue);  
+              font-size: rem(28);
+              line-height: rem(35);
+              margin: 0;
+              margin-bottom: rem(32);
+              
+              @include breakpoints-up(large){
+                text-align: left;
+                font-size: rem(32);
+                line-height: rem(37);
+              }
+
+            }
+
+            p{
+                
+            }
+
+        }
+  
+        
+        &-prop{
+
+            position: relative;
+            &:not(:last-child){
+                margin-bottom: rem(48);
+            }
+
+            @include breakpoints-up(large){
+                max-width: rem(438);
+            }
+
+
+            &-title{
+
+                border-top-left-radius: rem(19);
+                border-bottom-left-radius: rem(19);
+                height: rem(38);
+                background: rgba(242, 95, 58, .5);
+                margin-left: rem(18);
+                margin-bottom: rem(20);
+
+                @include breakpoints-up(large){
+                    background: unset;
+                    margin-left: 0;
+
+                }
+                
+                span{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: rem(68);
+                    height: rem(38);
+                    border-radius: rem(19);
+                    background: var(--bright-red);
+                    color: white;
+                    font-size: rem(16);
+                    margin-right: rem(18);
+
+                    @include breakpoints-up(large){
+                        position: absolute;
+                        top: 0;
+                        left: - rem(85);
+                        margin-right: 0;
+                    }
+                }
+                
+                h3{
+                    // height: 100%;
+                    font-size: rem(14);
+                    color: var(--dark-blue);
+                    margin: auto 0;
+                }
+
+            }
+
+
+            p{
+                width: calc(100% - rem(34));
+                margin: 0 auto;
+
+                @include breakpoints-up(large){
+                    margin: 0;
+                }
+            }
+
+                
+        }
+  
+  
+  
+  
+    }
+}

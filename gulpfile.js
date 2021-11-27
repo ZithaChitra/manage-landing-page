@@ -10,17 +10,17 @@ const cssnano = require('cssnano');
 
 // Sass Task
 function scssTask() {
-    return src('scss/**/*.scss', { sourcemaps: false })
+    return src('scss/**/*.scss', { sourcemaps: true })
         .pipe(sass())
         .pipe(postcss([autoprefixer(), cssnano()]))
-        .pipe(dest('./styles', { sourcemaps: false }));
+        .pipe(dest('./styles', { sourcemaps: true }));
 }
 
 function scssTask2() {
-    return src('scss/**/*.module.scss', { sourcemaps: false })
+    return src('scss/**/*.module.scss', { sourcemaps: true })
         .pipe(sass())
         .pipe(postcss([autoprefixer(), cssnano()]))
-        .pipe(dest('styles', { sourcemaps: false }));
+        .pipe(dest('styles', { sourcemaps: true }));
 }
 
 

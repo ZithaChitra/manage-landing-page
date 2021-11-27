@@ -1,22 +1,24 @@
 import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
 import styles from '../styles/components/Heroe.module.css'
-import heroe_image from '../public/images/illustration-intro.svg'
+import Link from 'next/link'
+import Image from 'next/image'
+import charts from '../public/images/illustration-intro.svg'
 
-
-function Heroe() {
+const Heroe = () => {
     return (
-        <div className={`${styles.heroe} pad pad-lr`}>
+        <div className={`${styles.heroe}`}>
 
+            
             <div className={`${styles.heroe__image}`}>
-
+                <div className={`${styles['heroe__image-wrapper']} img`}>
+                    <Image src={charts} alt='' layout='fill'/>                 
+                </div>
             </div>
 
             <div className={`${styles.heroe__text}`}>
                 <h1>
-                    Bring everyone <br />
-                    together to build  <br />
+                    Bring everyone 
+                    together to build
                     better products.
                 </h1>
 
@@ -25,7 +27,10 @@ function Heroe() {
                     tasks while keeping the larger team goals in view.
                 </p>
 
-                <Link href='/'><a className='cto'>Get Started</a></Link>
+
+                <div className={`${styles.heroe__cto}`}>
+                    <Link href='/'><a className='cta'>Get Started</a></Link>
+                </div>
             </div>
 
         </div>

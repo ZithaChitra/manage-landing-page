@@ -1,80 +1,88 @@
-@import '../utils';
-@import '../globals';
-
+@use '../util' as *;
 
 .heroe{
 
+    margin-bottom: rem(70);
     @include breakpoints-up(large){
         display: flex;
+        justify-content: center;
+        margin-bottom: rem(135);
     }
 
     &__image{
-        position: relative;
-        order: 2;
-        flex-grow: 1;
-        width: 100%;
-        min-height: toRem(277);
-        background-image: url('../../public/images/illustration-intro.svg');
-        background-size: 80%;
-        background-repeat: no-repeat;
-        background-position: center center;
 
-        &::before, &::after{
-            content: " ";
-            position: absolute;
-            display: block;
-        }
-
-        &::before{
-            background-image: url('../../public/images/bg-tablet-pattern.svg');
-        }
+        display: flex;
+        justify-content: center;
 
         @include breakpoints-up(large){
-            min-width: toRem(500);
-            // min-height: toRem(470);
-            height: 100%;
+            order: 2;
+        }
 
+        &-wrapper{
+            width: rem(314);
+            height: rem(284);
+
+
+            @include breakpoints-up(large){
+                width: rem(535);
+                height: rem(482);
+            }
         }
     }
 
+
     &__text{
-        flex-grow: 1;
-        order: 1;
+        width: calc(100% - rem(100));
+        margin: auto;
+
         @include breakpoints-up(large){
-            min-width: toRem(500);
+            order: 1;
+            width: rem(435);
+            margin: 0;
+            margin-right: rem(145);
         }
 
         h1{
-            font-size: toRem(42);
+            font-size: rem(40);
             font-weight: 700;
-            line-height: toRem(48);
-            color: $dark-blue;
+            line-height: rem(51);
+            color: var(--dark-blue);
             text-align: center;
-            margin-top: 0;
-            margin-bottom: toRem(24);
+            margin: 0;
+            margin-bottom: rem(16);
+
             @include breakpoints-up(large){
-                width: 100%;
-                font-size: toRem(56);
-                line-height: toRem(58);
-                margin-bottom: toRem(37);
+                font-size: rem(56);
+                line-height: rem(65);
+                margin-bottom: rem(35);
                 text-align: left;
             }
         }
 
         p{
-            color: $dark-grayish-blue;
-            font-size: toRem(15);
-            text-align: center;
-            line-height: toRem(17);
-            margin-bottom: toRem(36);
+            margin-bottom: rem(32);
+        
             @include breakpoints-up(large){
-                width: toRem(332);
-                margin-bottom: toRem(43);
-                text-align: left;
+                margin-bottom: rem(42);        
             }
         }
+    }
 
+    &__cto{
+        display: flex;
+        justify-content: center;
 
+        @include breakpoints-up(large){
+            display: block;
+            justify-content: start;
+            
+        }
+
+        a{
+            @include breakpoints-up(large){
+                margin: 0;
+            }
+        }
     }
 
 }
