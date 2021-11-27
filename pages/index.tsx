@@ -1,10 +1,13 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Link from 'next/link'
+import Image from 'next/image'
 import Heroe from '../components/Heroe'
 import Navbar from '../components/Navbar'
 
 import styles from '../styles/pages/index.module.css'
-
+import ali from '../public/images/avatar-ali.png'
+import logo from '../public/images/logo.svg'
 
 const Home: NextPage = () => {
   return (
@@ -70,41 +73,100 @@ const Home: NextPage = () => {
       </div>
 
 
-      {/* What they’ve said
+      <div className={`${styles.home__tests}`}>
 
-      Anisha Li
-      “Manage has supercharged our team’s workflow. The ability to maintain
-      visibility on larger milestones at all times keeps everyone motivated.”
+        <h2>What they’ve said</h2>
 
-      Ali Bravo
-      “We have been able to cancel so many other subscriptions since using
-      Manage. There is no more cross-channel confusion and everyone is much
-      more focused.”
 
-      Richard Watts
-      “Manage allows us to provide structure and process. It keeps us organized
-      and focused. I can’t stop recommending them to everyone I talk to!”
+        <div className={`${styles['home__tests-peps']}`}>
 
-      Shanai Gough
-      “Their software allows us to track, manage and collaborate on our projects
-      from anywhere. It keeps the whole team in-sync without being intrusive.”
+          <div className='flex flex-ai-c flex-jc-c'>
+            <div className={`${styles['home__tests-peps-img']} img`}>
+              <Image src={ali} alt='' layout='fill'/>
+            </div>
+          </div>
+          
+          <h4>Anisha Li</h4>
+          <p>
+            “Manage has supercharged our team’s workflow. The ability to maintain
+            visibility on larger milestones at all times keeps everyone motivated.”
+          </p>
+        </div>
+{/* 
+        Ali Bravo
+        “We have been able to cancel so many other subscriptions since using
+        Manage. There is no more cross-channel confusion and everyone is much
+        more focused.”
 
-      Get Started
+        Richard Watts
+        “Manage allows us to provide structure and process. It keeps us organized
+        and focused. I can’t stop recommending them to everyone I talk to!”
 
-      Simplify how your team works today.
-      Get Started
+        Shanai Gough
+        “Their software allows us to track, manage and collaborate on our projects
+        from anywhere. It keeps the whole team in-sync without being intrusive.” */}
 
-      Home
-      Pricing
-      Products
-      About Us
-      Careers
-      Community
-      Privacy Policy
+        <div className={`${styles['home__tests-cta']}`}>
+          <Link href='/'><a className='cta'>Get Started</a></Link>
+        </div>
+      </div>
 
-      Updates in your inbox…
-      Go */}
+      
+      <div className={`${styles.home__footer}`}>
+        <div className={`${styles['home__footer-cta']}`}>
+          <div>
+            <h2>Simplify how your team works today.</h2>
+          </div>
 
+          <div className={`${styles['']}`}>
+            <Link href='/'><a className='cta white'>Get Started</a></Link>
+          </div>
+        </div>
+
+
+        <div className={`${styles['home__footer-links']}`}>
+          <div className={`${styles['home__footer-links-wrapper']}`}>
+
+            <div className={`${styles['home__footer-links-form']}`}>
+              <div>
+                <input type="text" placeholder='updates in your inbox...'/>  
+              </div>
+              <div>
+                <button>Go</button>
+              </div>
+            </div>
+
+
+
+            <div className={`${styles['home__footer-links-sec']} flex flex-ai-c`}>
+              <div className={`${styles['home__footer-links-sec-1']}`}>
+                <Link href='/'><a>Home</a></Link>
+                <Link href='/'><a>Pricing</a></Link>
+                <Link href='/'><a>Products</a></Link>
+                <Link href='/'><a>About Us</a></Link>
+              </div>
+              <div className={`${styles['home__footer-links-sec-2']}`}>
+                <Link href='/'><a>Careers</a></Link>
+                <Link href='/'><a>Community</a></Link>
+                <Link href='/'><a>Privacy Policy</a></Link>
+              </div>
+            </div>
+
+            <div className={`${styles['home__footer-links-icons']}`}>
+              <div className={`${styles['home__footer-links-icons-logo']} img`}>
+                <Image src={logo} alt='' layout='fill'/>
+              </div>
+
+              <div className={`${styles['home__footer-links-icons-socials']}`}>
+
+              </div>
+            </div>
+
+
+
+          </div>
+        </div> 
+      </div>
 
 
 

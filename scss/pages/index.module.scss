@@ -5,6 +5,8 @@
 
     &__info{
 
+        margin-bottom: rem(70);
+
         @include breakpoints-up(large){
             display: flex;
             justify-content: center;
@@ -112,13 +114,194 @@
                 @include breakpoints-up(large){
                     margin: 0;
                 }
+            }       
+        }
+    }
+
+
+    &__tests{
+
+        width: calc(100% - rem(90));
+        margin: 0 auto;
+        margin-bottom: rem(40);
+
+        @include breakpoints-up(large){
+            margin-bottom: rem(180);
+        }
+
+        h2{
+            text-align: center;
+            color: var(--dark-blue);  
+            font-size: rem(28);
+            line-height: rem(35);
+            margin: 0;
+            margin-bottom: rem(50);
+            
+            @include breakpoints-up(large){
+              font-size: rem(32);
+              line-height: rem(37);
+            }
+        }
+
+        &-peps{
+
+            &-img{
+                width: rem(72);
+                height: rem(72);
+                border-radius: 50%;
+                margin-bottom: rem(30);
             }
 
-                
+            h4{
+                color: var(--dark-blue);
+                text-align: center;
+                font-size: rem(14);
+                margin: 0;
+                margin-bottom: rem(30);
+            }
+
+            p{
+                margin-bottom: rem(30);
+                text-align: center;
+            }
         }
-  
-  
-  
-  
+
+    }
+
+
+
+    &__footer{
+        
+        &-cta{
+            background: var(--bright-red);
+            // width: calc(100% - rem(90));
+            padding: rem(90) rem(45);
+            // padding-top: rem(90);
+            margin: 0 auto;
+
+            @include breakpoints-up(large){
+                display: flex;
+                justify-content: space-between;
+            }
+
+
+            h2{
+                text-align: center;
+                color: white;  
+                font-size: rem(28);
+                line-height: rem(35);
+                margin: 0;
+                margin-bottom: rem(25);
+                
+                @include breakpoints-up(large){
+                  font-size: rem(32);
+                  line-height: rem(37);
+                }
+            }
+        }
+
+
+        &-links{
+            background: var(--very-dark-blue);
+
+            @include breakpoints-up(large){
+                padding-bottom: rem(60);
+            }
+
+            
+            &-wrapper{
+                width: calc(100% - rem(46));
+                margin: 0 auto;
+                padding-top: rem(50);
+
+                @include breakpoints-up(large){
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: rem(60);
+                }
+            }
+
+            &-icons{
+
+                margin-bottom: rem(60);
+
+                @include breakpoints-up(large){
+                    order: 1;
+                    margin: 0;
+                    margin-right: rem(120);
+                }
+
+                &-logo{
+                    width: rem(160);
+                    height: rem(28);
+                    margin: 0 auto;
+                }
+            }
+
+            &-sec{
+
+                display: flex;
+                justify-content: center;
+                margin-bottom: rem(60);
+
+                @include breakpoints-up(large){
+                    order: 2;
+                    margin: 0;
+                    margin-right: rem(170);
+                }
+
+                a{
+                    color: var(--vary-light-gray);
+                    font-size: rem(12);
+                    display: block;
+
+                    &:not(:last-child){
+                        margin-bottom: rem(22);
+                    }
+                }
+
+                &-1{
+                    margin-right: rem(108);
+
+                    @include breakpoints-up(large){
+                        margin-right: rem(218);
+                    }
+                }
+
+
+            }
+
+            &-form{
+
+                display: flex;
+                justify-content: center;
+                margin-bottom: rem(60);
+
+                @include breakpoints-up(large){
+                    order: 3;
+                    margin: 0;
+                }
+
+                input[type="text"]{
+                    height: rem(44);
+                    width: rem(238);
+                    border-radius: rem(22);
+                    margin: 0;
+                    margin-right: rem(9);
+                    padding-left: rem(25);
+                    border: hidden;
+                }
+
+                button{
+                    width: rem(80);
+                    height: rem(44);
+                    border-radius: rem(22);
+                    border: hidden;
+                    background: var(--bright-red);
+                    color: white;
+                }
+
+            }
+        }
     }
 }

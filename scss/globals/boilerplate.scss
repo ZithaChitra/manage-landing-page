@@ -125,6 +125,11 @@ p{
 	justify-content: center;
 	cursor: pointer;
 
+	&.white{
+		background: white;
+		color: var(--bright-red);
+	}
+
 	&:hover{
 		opacity: 0.5;
 	}
