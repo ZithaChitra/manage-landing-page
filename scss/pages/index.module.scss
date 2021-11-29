@@ -179,25 +179,35 @@
             // padding-top: rem(90);
             margin: 0 auto;
 
-            @include breakpoints-up(large){
-                display: flex;
-                justify-content: space-between;
-            }
-
-
-            h2{
-                text-align: center;
-                color: white;  
-                font-size: rem(28);
-                line-height: rem(35);
-                margin: 0;
-                margin-bottom: rem(25);
+            
+            &-wrapper{
                 
+                width: calc(100% - rem(90));
+                margin: 0 auto;
+
                 @include breakpoints-up(large){
-                  font-size: rem(32);
-                  line-height: rem(37);
+                    min-width: 375;
+                    display: flex;
+                    justify-content: space-between;
+                    
+                }
+
+                h2{
+                    text-align: center;
+                    color: white;  
+                    font-size: rem(28);
+                    line-height: rem(35);
+                    margin: 0;
+                    margin-bottom: rem(25);
+                    
+                    @include breakpoints-up(large){
+                      font-size: rem(32);
+                      line-height: rem(37);
+                    }
                 }
             }
+
+
         }
 
 

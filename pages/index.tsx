@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Heroe from '../components/Heroe'
 import Navbar from '../components/Navbar'
+import Testmons from '../components/Testmons'
 
 import styles from '../styles/pages/index.module.css'
 import ali from '../public/images/avatar-ali.png'
@@ -77,8 +78,8 @@ const Home: NextPage = () => {
 
         <h2>What they’ve said</h2>
 
-
-        <div className={`${styles['home__tests-peps']}`}>
+        <Testmons />
+        {/* <div className={`${styles['home__tests-peps']}`}>
 
           <div className='flex flex-ai-c flex-jc-c'>
             <div className={`${styles['home__tests-peps-img']} img`}>
@@ -91,7 +92,7 @@ const Home: NextPage = () => {
             “Manage has supercharged our team’s workflow. The ability to maintain
             visibility on larger milestones at all times keeps everyone motivated.”
           </p>
-        </div>
+        </div> */}
 {/* 
         Ali Bravo
         “We have been able to cancel so many other subscriptions since using
@@ -114,18 +115,20 @@ const Home: NextPage = () => {
       
       <div className={`${styles.home__footer}`}>
         <div className={`${styles['home__footer-cta']}`}>
-          <div>
-            <h2>Simplify how your team works today.</h2>
-          </div>
+          <div className={`${styles['home__footer-cta-wrapper']}`}>
+            <div>
+              <h2>Simplify how your team works today.</h2>
+            </div>
 
-          <div className={`${styles['']}`}>
-            <Link href='/'><a className='cta white'>Get Started</a></Link>
+            <div className={`${styles['']}`}>
+              <Link href='/'><a className='cta white'>Get Started</a></Link>
+            </div>
           </div>
         </div>
 
 
         <div className={`${styles['home__footer-links']}`}>
-          <div className={`${styles['home__footer-links-wrapper']}`}>
+          <div className={`${styles['home__footer-links-wrapper']} container`}>
 
             <div className={`${styles['home__footer-links-form']}`}>
               <div>
